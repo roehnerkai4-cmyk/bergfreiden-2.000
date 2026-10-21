@@ -1,0 +1,19 @@
+# Exported from Render on 2026-10-21T08:25:18Z
+version: "1"
+projects:
+- name: My project
+  environments:
+  - name: Production
+    services:
+    - type: web
+      name: bergfreiden-2.000
+      runtime: node
+      repo: https://github.com/roehnerkai4-cmyk/bergfreiden-2.000
+      plan: free
+      envVars:
+      - key: Kai
+        sync: false
+      region: frankfurt
+      buildCommand: yarn
+      startCommand: Start
+      autoDeployTrigger: commit
