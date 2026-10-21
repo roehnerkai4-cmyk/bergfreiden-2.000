@@ -1,6 +1,2 @@
-name = "manuscript-upload"
-compatibility_date = "2024-09-01"
-
-[[r2_buckets]]
-binding = "MANUSCRIPTS_BUCKET"
-bucket_name = "manuscripts"
+# Cloudflare integration removed.
+# This project is now a static landing page again.

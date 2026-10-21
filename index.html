@@ -3,71 +3,202 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manuskript Upload</title>
     <meta
       name="description"
-      content="Öffentliche Upload- und Vorschau-Seite für fertige Web-Manuskripte."
+      content="Bergfreiden 2.000 – Natur, Genuss und Entspannung im Herzen der Berge."
     />
-    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <title>Bergfreiden 2.000</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="app-shell">
-      <header class="topbar">
-        <div class="brand-wrap">
-          <div class="brand-mark">M</div>
-          <div class="brand-copy">
-            <span class="brand-name">Manuskript Upload</span>
-            <span class="brand-subtitle">Cloudflare Public</span>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand" aria-label="Bergfreiden 2.000 Logo">
+          <span class="brand-mark">B</span>
+          <span>Bergfreiden 2.000</span>
+        </div>
+        <nav class="main-nav" aria-label="Hauptnavigation">
+          <a href="#erleben">Erleben</a>
+          <a href="#angebote">Angebote</a>
+          <a href="#über-uns">Über uns</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+        <a class="button button-primary" href="#kontakt">Jetzt buchen</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Natur • Genuss • Entspannung</p>
+            <h1>Dein Refugium über 2.000 Metern.</h1>
+            <p class="lead">
+              Bergfreiden 2.000 verbindet alpine Energie, ruhige Momente und
+              regionale Küche – perfekt für Wochenend-Urlaube, Auszeiten und
+              besondere Anlässe.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#angebote">Entdecke mehr</a>
+              <a class="button button-secondary" href="#über-uns">Mehr erfahren</a>
+            </div>
+            <ul class="hero-points" aria-label="Vorteile">
+              <li>Panoramische Berglage</li>
+              <li>Regionale Spezialitäten</li>
+              <li>Private Atmosphäre</li>
+            </ul>
+          </div>
+
+          <div class="hero-card" aria-label="Bergfreiden Erlebnis">
+            <div class="card-badge">Sommer & Winter</div>
+            <h2>Erlebnisurlaub in der Höhe</h2>
+            <div class="stats">
+              <div>
+                <strong>12 km</strong>
+                <span>Wanderwege</span>
+              </div>
+              <div>
+                <strong>4 Sterne</strong>
+                <span>Atmosphäre</span>
+              </div>
+              <div>
+                <strong>24/7</strong>
+                <span>Willkommensservice</span>
+              </div>
+            </div>
+            <div class="mini-panel">
+              <span>Aktuell</span>
+              <strong>Herbstangebote bis 30%</strong>
+            </div>
           </div>
         </div>
-        <div class="status-pill">Öffentlich</div>
-      </header>
+      </section>
 
-      <main class="workspace">
-        <section class="panel upload-panel">
-          <div id="dropzone" class="dropzone" aria-label="Datei hochladen">
-            <input id="fileInput" type="file" hidden accept=".html,.htm,.zip,.txt,.md,.pdf" />
-            <div class="dropzone-content">
-              <div class="upload-icon">⬆️</div>
-              <h1>Manuskript hier ablegen</h1>
-              <p>oder</p>
-              <button type="button" class="primary-btn" id="browseBtn">Datei auswählen</button>
-            </div>
+      <section id="erleben" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Das Erlebnis</p>
+            <h2>Vom Bergblick bis zum Abendessen</h2>
           </div>
 
-          <div class="meta-list">
-            <div class="meta-item">
-              <span>Datei</span>
-              <strong id="fileName">Keine Datei ausgewählt</strong>
-            </div>
-            <div class="meta-item">
-              <span>Größe</span>
-              <strong id="fileSize">—</strong>
-            </div>
-            <div class="meta-item">
-              <span>Typ</span>
-              <strong id="fileType">—</strong>
-            </div>
-          </div>
-        </section>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="icon">⛰️</div>
+              <h3>Alpine Einblicke</h3>
+              <p>
+                Erlebe klare Bergluft, Ausblicke über die Gipfel und erholsame
+                Spaziergänge direkt vor der Haustür.
+              </p>
+            </article>
 
-        <section class="panel preview-panel">
-          <div class="preview-head">
-            <h2>Vorschau</h2>
-            <button id="openInNewTab" class="secondary-btn" type="button">In neuem Tab öffnen</button>
+            <article class="feature-card">
+              <div class="icon">🍽️</div>
+              <h3>Genuss am Berg</h3>
+              <p>
+                Regionale Spezialitäten, handwerklich hergestellte Produkte und
+                gemütliche Abendstunden rund um den Kamin.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="icon">🧘</div>
+              <h3>volle Entspannung</h3>
+              <p>
+                Pflege deine Auszeiten mit Wellness-Elementen, ruhigen Nächten
+                und einem klaren Fokus auf Erholung.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="angebote" class="section alt-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Angebote</p>
+            <h2>Für deinen perfekten Aufenthalt</h2>
           </div>
 
-          <div class="preview-frame-wrap">
-            <div id="emptyState" class="empty-state">
-              Noch keine Datei hochgeladen.<br />
-              Lade dein fertiges Manuskript hoch, um es hier anzusehen.
+          <div class="offer-grid">
+            <div class="offer-item">
+              <span>01</span>
+              <h3>Wochenend-Urlaub</h3>
+              <p>Perfekt für Zwei oder als kurzer Ausbruch aus dem Alltag.</p>
             </div>
-            <iframe id="previewFrame" title="Manuskriptvorschau" style="display:none;"></iframe>
+            <div class="offer-item">
+              <span>02</span>
+              <h3>Wellness & Erholung</h3>
+              <p>Ruhe, Rückzug und viel Zeit für die kleinen Dinge im Leben.</p>
+            </div>
+            <div class="offer-item">
+              <span>03</span>
+              <h3>Gruppen & Events</h3>
+              <p>Für kleine Feiern, Teamtage oder inspirierende gemeinsame Tage.</p>
+            </div>
           </div>
-        </section>
-      </main>
-    </div>
+        </div>
+      </section>
+
+      <section id="über-uns" class="section about-section">
+        <div class="container about-grid">
+          <div class="about-copy">
+            <p class="eyebrow">Über uns</p>
+            <h2>Ein Ort, der zur Ruhe einlädt.</h2>
+            <p>
+              Bergfreiden 2.000 wurde geschaffen, um Menschen eine authentische
+              Berg-Erfahrung zu bieten: mit warmem Service, klarer Natur und
+              dem gewissen Gefühl von Auszeit.
+            </p>
+            <p>
+              Ob für aktive Tage auf Bergpfaden oder entspannte Stunden mit Blick
+              auf die Alpen – wir gestalten jeden Aufenthalt mit Aufmerksamkeit
+              und Herz.
+            </p>
+          </div>
+          <div class="about-card">
+            <ul>
+              <li>Atmosphärische Berglage</li>
+              <li>Regionale Küche und Getränke</li>
+              <li>Persönlicher Service</li>
+              <li>Flexible Buchungszeiten</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="kontakt" class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand footer-brand">
+            <span class="brand-mark">B</span>
+            <span>Bergfreiden 2.000</span>
+          </div>
+          <p>Erholung, Genuss und Bergluft in einem.</p>
+        </div>
+
+        <div>
+          <h3>Kontakt</h3>
+          <p>Email: hello@bergfreiden2000.de</p>
+          <p>Telefon: +49 123 456 789</p>
+        </div>
+
+        <div>
+          <h3>Adresse</h3>
+          <p>Alpenstraße 24<br />Bergdorf, 2000</p>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Bergfreiden 2.000</p>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
