@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "wrangler pages dev .",
-    "deploy": "wrangler pages deploy ."
+    "deploy": "wrangler pages deploy .",
+    "start": "wrangler pages dev . --port 10000"
   },
   "devDependencies": {
     "wrangler": "^3.99.0"
